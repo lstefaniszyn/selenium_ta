@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25365" started-at="2018-02-22T06:53:35Z" finished-at="2018-02-22T06:54:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25365" started-at="2018-02-22T06:53:35Z" finished-at="2018-02-22T06:54:01Z">
+      <class name="example.TC2">
+        <test-method status="PASS" signature="TestSetup()[pri:0, instance:example.TC2@4678c730]" name="TestSetup" is-config="true" duration-ms="23959" started-at="2018-02-22T07:53:35Z" finished-at="2018-02-22T07:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSetup -->
+        <test-method status="PASS" signature="UserSeesListOfProductCategories()[pri:0, instance:example.TC2@4678c730]" name="UserSeesListOfProductCategories" duration-ms="1063" started-at="2018-02-22T07:53:59Z" description="Verify if user sees all required product categories" finished-at="2018-02-22T07:54:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserSeesListOfProductCategories -->
+        <test-method status="PASS" signature="TestTeardown()[pri:0, instance:example.TC2@4678c730]" name="TestTeardown" is-config="true" duration-ms="281" started-at="2018-02-22T07:54:00Z" finished-at="2018-02-22T07:54:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestTeardown -->
+      </class> <!-- example.TC2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

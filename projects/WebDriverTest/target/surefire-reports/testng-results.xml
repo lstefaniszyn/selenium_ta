@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="17329" started-at="2018-02-21T06:46:29Z" finished-at="2018-02-21T06:46:46Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="17329" started-at="2018-02-21T06:46:29Z" finished-at="2018-02-21T06:46:46Z">
+      <class name="example.NewTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:example.NewTest@23223dd8]" name="beforeTest" is-config="true" duration-ms="10914" started-at="2018-02-21T07:46:29Z" finished-at="2018-02-21T07:46:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="SuccesfullLogin()[pri:0, instance:example.NewTest@23223dd8]" name="SuccesfullLogin" duration-ms="5827" started-at="2018-02-21T07:46:40Z" description="Verify if user with vlaid login and password is able to login" finished-at="2018-02-21T07:46:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuccesfullLogin -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:example.NewTest@23223dd8]" name="afterTest" is-config="true" duration-ms="538" started-at="2018-02-21T07:46:46Z" finished-at="2018-02-21T07:46:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- example.NewTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
