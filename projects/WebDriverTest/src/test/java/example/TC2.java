@@ -64,6 +64,8 @@ public class TC2 {
 		}
 
 		public HashSet<String> getExpectedCategories() {
+			//Tworzac liste bardziej optymalne jest implementowanie do interfejsu, tzn.
+			// Set<String> hset = new HashSet<String>();+
 			HashSet<String> hset = new HashSet<String>();
 			hset.add("Accessories");
 			hset.add("iMacs");
