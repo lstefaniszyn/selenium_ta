@@ -19,9 +19,14 @@ public class TC1 {
 	    
 	    private WebDriver driver;	
 	    
-	    @BeforeTest
+	//Bardzo fajnie ze wydzieliles tworzenie polaczenia do Firefox do BeforeTest    
+	@BeforeTest
 		public void TestSetup() {	
 
+			//Natomiast niestety ten test nie zadziala, u tych osob ktore nie maja sterownik w sciezce "/usr/local/bin/geckodriver". 
+			//Lepszym tutaj rozwiazaniem byloby wrzucenie do Repo pliku z sterownikim i podpiecie sie do tego folderu
+			// String path = System.getProperty("user.dir") + Paths.get("/src/resources/geckodriver");
+			// System.setProperty("webdriver.gecko.driver", path);
 			System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
 			driver = new FirefoxDriver();     
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -36,7 +41,8 @@ public class TC1 {
 	        VerifyPageContent();
 		}
 			
-		@AfterTest
+	//Dobrze ze nie zapomniales zamknac polaczenie do Firefox. Rownie dobrze ze jest to zrobione w @AfterTest	
+	@AfterTest
 		public void TestTeardown() {
 			driver.quit();			
 		}		
@@ -45,7 +51,9 @@ public class TC1 {
 			
 			String usernameInput = "username";
 			String passwordInput = "password";
-			WebElement loginLocator = driver.findElement(By.name(usernameInput));
+
+			//Przegladnij sobie prosze wzorzec Page Object Pattern/ Page Object Model. Wazna zasada jest nie uzywanie "driver-a" w pliku gdzie wykonujemy test
+			WebElement loginLocator = driver.findElement(By.name(usernameInput)); 
 			loginLocator.sendKeys("user_mail");
 			WebElement passwordLocator = driver.findElement(By.name(passwordInput));
 			passwordLocator.sendKeys("user_password");
@@ -55,7 +63,8 @@ public class TC1 {
 		
 		public void VerifyPageContent() {
 			 
-			 String xpathToMainNaviItem = "//a[@ui-sref='app.main']";
+			//Uzywanie xPath nie jest najbardziej optymalnym rozwiązaniem. Przegladnij sobie prosze https://saucelabs.com/resources/articles/selenium-tips-css-selectors 
+			String xpathToMainNaviItem = "//a[@ui-sref='app.main']";
 			 WebElement naviItem = driver.findElement(By.xpath(xpathToMainNaviItem));
 			 Assert.assertTrue(naviItem.isDisplayed());
 			 Assert.assertTrue(naviItem.isEnabled());
